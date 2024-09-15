@@ -39,7 +39,7 @@ def main() -> None:
     config.output_dir.mkdir(parents=True, exist_ok=True)
 
     sct = mss.mss()
-    monitor = sct.monitors[0]
+    monitor = sct.monitors[1]
     stats = ProcessingStats()
     image_validator = ImageValidator(config, stats)
     image_processor = ImageProcessor(config, stats)
