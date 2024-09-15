@@ -1,0 +1,88 @@
+[project]
+name = "diabloscreen"
+version = "0.1.0"
+description = "Extract item details by watching the screen"
+dependencies = [
+    "imagehash>=4.3.1",
+    "mss>=9.0.2",
+    "sentry-sdk>=2.14.0",
+    "opencv-python>=4.10.0.84",
+    "pillow<=10.2.0",
+    "pip>=24.2",
+    "onnxruntime>=1.19.2",
+    "ultralytics>=8.2.93",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "mypy>=1.11.2",
+    "pytest>=8.3.3",
+    "ruff>=0.6.5",
+    "vulture>=2.11",
+]
+
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/diabloscreen"]
+
+
+[tool.ruff]
+cache-dir = ".cache/ruff_cache"
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "A",     # flake8-builtins
+    "ARG",   # flake8-unused-arguments
+    "ASYNC", # flake8-async
+    "B",     # Bugbear
+    "BLE",   # flake8-blind-except
+    "C4",    # flake8-comprehensions
+    "DTZ",   # flake8-datetimez
+    "E",     # pycodestyle error
+    "EM",    # flake8-errmsg
+    "ERA",   # eradicate
+    "F",     # pyflakes
+    "FBT",   # flake8-boolean-trap
+    "FIX",   # flake8-fixme
+    "INT",   # flake8-gettext
+    "I",     # isort
+    "N",     # pep8-naming
+    "PIE",   # flake8-pie
+    "PLE",   # pylint error
+    "PT",    # flake8-pytest-style
+    "PTH",   # flake8-use-pathlib
+    "Q",     # flake8-quotes
+    "RET",   # flake8-return
+    "RSE",   # flake8-raise
+    "RUF",   # ruff
+    "S",     # flake8-bandit
+    "SIM",   # flake8-simplify
+    "SLF",   # flake8-self
+    "TRY",   # tryceratops
+    "UP",    # pyupgrade
+    "W",     # pycodestyle warning
+]
+fixable = ["ALL"]
+unfixable = []
+ignore = [
+    "EM101",  # Exception must not use a string literal, assign to variable first
+    "EM102",  # Exception must not use an f-string literal, assign to variable first
+    "S101",   # Use of assert detected
+    "TRY003", # Avoid specifying long messages outside the exception class
+    "FIX002", # Line contains TODO, consider resolving the issue
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
