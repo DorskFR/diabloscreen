@@ -21,7 +21,7 @@ class Config:
             Path(os.getenv("DIABLO_MODEL_PATH", "yolov8diablo.pt")),
             Path(os.getenv("DIABLO_OUTPUT_DIR", "items")),
             float(os.getenv("DIABLO_LOOP_DELAY", "1.0")),
-            float(os.getenv("DIABLO_CONFIDENCE_THRESHOLD", "0.40")),
-            float(os.getenv("DIABLO_SIMILARITY_THRESHOLD", "5")),
+            float(os.getenv("DIABLO_CONFIDENCE_THRESHOLD", "0.25")),
+            float(os.getenv("DIABLO_SIMILARITY_THRESHOLD", "1")),
             float(os.getenv("DIABLO_IMAGE_QUALITY_THRESHOLD", "0.75")),
         )

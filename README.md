@@ -41,8 +41,8 @@ Some settings can be fine tuned with environment variables:
 | DIABLO_MODEL_PATH              | No       | yolov8diablo.pt | can also be .onnx                   |
 | DIABLO_OUTPUT_DIR              | No       | items           |                                     |
 | DIABLO_LOOP_DELAY              | No       | 1.0             | in seconds, lower requires more cpu |
-| DIABLO_CONFIDENCE_THRESHOLD    | No       | 0.40            | detection                           |
-| DIABLO_SIMILARITY_THRESHOLD    | No       | 5               | duplicates                          |
+| DIABLO_CONFIDENCE_THRESHOLD    | No       | 0.25            | detection                           |
+| DIABLO_SIMILARITY_THRESHOLD    | No       | 1               | duplicates                          |
 | DIABLO_IMAGE_QUALITY_THRESHOLD | No       | 0.75            |                                     |
 
 ## Model training
