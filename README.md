@@ -1,7 +1,7 @@
 
 # diabloscreen
 
-## What is it
+## What it is
 
 It watches your screen and when it detects a Diablo IV item description it crops and saves it.
 
