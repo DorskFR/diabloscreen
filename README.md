@@ -16,6 +16,20 @@ Recognized item descriptions are then cropped and the image is hashed.
 The hash is compared with previously seen hashes to avoid saving duplicates.
 Image quality is scored to remove poor images (half transparent, etc.)
 
+## Install
+
+Using https://rye.astral.sh/
+
+```bash
+curl -sSf https://rye.astral.sh/get | bash
+git clone https://github.com/DorskFR/diabloscreen.git && cd diabloscreen
+rye sync
+make run
+```
+
+Tested on Linux and macos
+Not tested on Windows but should work I guess (feedback welcome).
+
 ## Environment variables
 
 Some settings can be fine tuned with environment variables:
