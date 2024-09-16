@@ -25,8 +25,8 @@ dev-dependencies = [
     "pytest>=8.3.3",
     "ruff>=0.6.5",
     "vulture>=2.11",
+    "types-pillow>=10.2.0.20240822",
 ]
-
 
 [tool.hatch.metadata]
 allow-direct-references = true
@@ -34,6 +34,10 @@ allow-direct-references = true
 [tool.hatch.build.targets.wheel]
 packages = ["src/diabloscreen"]
 
+[tool.mypy]
+[[tool.mypy.overrides]]
+module = "ultralytics.*"
+ignore_missing_imports = true
 
 [tool.ruff]
 cache-dir = ".cache/ruff_cache"

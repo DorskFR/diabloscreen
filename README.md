@@ -20,6 +20,7 @@ Some settings can be fine tuned with environment variables:
 
 | variable                       | required | default value   | Notes                               |
 | ------------------------------ | -------- | --------------- | ----------------------------------- |
+| DIABLO_MONITOR                 | No       | 0               | adjust for multi-monitor setup      |
 | DIABLO_MODEL_PATH              | No       | yolov8diablo.pt | can also be .onnx                   |
 | DIABLO_OUTPUT_DIR              | No       | items           |                                     |
 | DIABLO_LOOP_DELAY              | No       | 1.0             | in seconds, lower requires more cpu |

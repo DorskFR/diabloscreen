@@ -1,4 +1,5 @@
 import logging
+from collections.abc import Iterator
 
 import numpy as np
 from ultralytics import YOLO
@@ -28,6 +29,6 @@ class ImageProcessor:
 
         return cropped_images
 
-    def process(self, img: np.ndarray) -> None:
+    def process(self, img: np.ndarray) -> Iterator[np.ndarray]:
         for cropped, _i, _class_id in self._detect_objects(img):
             yield cropped

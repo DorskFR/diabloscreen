@@ -29,17 +29,13 @@ def setup_sentry() -> None:
     else:
         logger.info("Sentry DSN not provided. Error tracking is disabled.")
 
-    def process(self, img: np.ndarray) -> None:
-        cropped_images = self._detect_and_crop(img)
-        timestamp = datetime.now(UTC).strftime("%Y%m%d%H%M%S%f")
-
 
 def main() -> None:
     config = Config.from_env()
     config.output_dir.mkdir(parents=True, exist_ok=True)
 
     sct = mss.mss()
-    monitor = sct.monitors[1]
+    monitor = sct.monitors[config.monitor]
     stats = ProcessingStats()
     image_validator = ImageValidator(config, stats)
     image_processor = ImageProcessor(config, stats)

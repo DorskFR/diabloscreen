@@ -41,7 +41,7 @@ class ImageValidator:
     def _analyze_color_histogram(image: np.ndarray) -> float:
         hist = cv2.calcHist([image], [0, 1, 2], None, [8, 8, 8], [0, 256, 0, 256, 0, 256])
         hist = cv2.normalize(hist, hist).flatten()
-        return np.std(hist)
+        return float(np.std(hist))
 
     def _score_image_quality(self, image: np.ndarray) -> float:
         text_ratio = self._calculate_text_area_ratio(image)

@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 class ProcessingStats:
     def __init__(self) -> None:
-        self.counter = Counter()
+        self.counter: Counter[str] = Counter()
         self.start_time = time.time()
 
     def increment(self, key: str, value: int = 1) -> None:
