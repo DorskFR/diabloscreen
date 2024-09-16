@@ -28,6 +28,7 @@ make run
 ```
 
 Tested on Linux and macos
+
 Not tested on Windows but should work I guess (feedback welcome).
 
 ## Environment variables
