@@ -4,6 +4,7 @@
 ## What is it
 
 It watches your screen and when it detects a Diablo IV item description it crops and saves it.
+
 The crops can then be used on https://diablo.trade directly.
 
 https://github.com/user-attachments/assets/da643ed8-5883-487e-9125-4b41a90fb0ae
